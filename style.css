@@ -23,6 +23,17 @@ body {
     margin-bottom: 15px;
 }
 
+.logout-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: red;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
 button {
     padding: 8px 15px;
     background-color: #007bff;
