@@ -7,17 +7,38 @@ let votes = {
 let loggedInUser = "";
 let votedUsers = [];
 
+// Predefined users (demo purpose)
+let users = {
+    sri: "1234",
+    admin: "admin123",
+    user1: "pass1"
+};
+
 function login() {
     let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-    if (username === "") {
-        alert("Please enter username");
+    if (username === "" || password === "") {
+        alert("Please enter username and password");
         return;
     }
 
-    loggedInUser = username;
-    document.getElementById("loginBox").style.display = "none";
-    document.getElementById("votingSection").style.display = "block";
+    if (users[username] && users[username] === password) {
+        loggedInUser = username;
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("votingSection").style.display = "block";
+    } else {
+        alert("Invalid username or password");
+    }
+}
+
+function logout() {
+    loggedInUser = "";
+    document.getElementById("votingSection").style.display = "none";
+    document.getElementById("loginBox").style.display = "block";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("resultBox").innerHTML = "";
 }
 
 function vote(candidate) {
