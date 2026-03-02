@@ -9,11 +9,14 @@
     <div class="login-box" id="loginBox">
         <h2>Login to Vote</h2>
         <input type="text" id="username" placeholder="Enter Username" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
         <button onclick="login()">Login</button>
     </div>
 
     <div class="voting-section" id="votingSection" style="display:none;">
         <h1>Online Voting System</h1>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
 
         <div class="container">
 
