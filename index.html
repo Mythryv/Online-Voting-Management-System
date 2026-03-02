@@ -6,30 +6,42 @@
 </head>
 <body>
 
-    <h1>Online Voting System</h1>
-
-    <div class="container">
-
-        <div class="candidate">
-            <h3>Candidate A</h3>
-            <p>Votes: <span id="A">0</span></p>
-            <button onclick="vote('A')">Vote</button>
-        </div>
-
-        <div class="candidate">
-            <h3>Candidate B</h3>
-            <p>Votes: <span id="B">0</span></p>
-            <button onclick="vote('B')">Vote</button>
-        </div>
-
-        <div class="candidate">
-            <h3>Candidate C</h3>
-            <p>Votes: <span id="C">0</span></p>
-            <button onclick="vote('C')">Vote</button>
-        </div>
-
+    <div class="login-box" id="loginBox">
+        <h2>Login to Vote</h2>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <button onclick="login()">Login</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="voting-section" id="votingSection" style="display:none;">
+        <h1>Online Voting System</h1>
+
+        <div class="container">
+
+            <div class="candidate">
+                <h3>Candidate A</h3>
+                <p>Votes: <span id="A">0</span></p>
+                <button onclick="vote('A')">Vote</button>
+            </div>
+
+            <div class="candidate">
+                <h3>Candidate B</h3>
+                <p>Votes: <span id="B">0</span></p>
+                <button onclick="vote('B')">Vote</button>
+            </div>
+
+            <div class="candidate">
+                <h3>Candidate C</h3>
+                <p>Votes: <span id="C">0</span></p>
+                <button onclick="vote('C')">Vote</button>
+            </div>
+
+        </div>
+
+        <button class="result-btn" onclick="showResult()">Show Result</button>
+
+        <div id="resultBox"></div>
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>
